@@ -20,8 +20,7 @@ content="GIS Explorer">
 <link rel="stylesheet"
 href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<link rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css">
 
 <style>
 
@@ -68,8 +67,10 @@ body{
 }
 
 #map{
-    height:500px;
-    width:100%;
+height:50vh;
+min-height:300px;
+width:100%;
+border-radius:12px;
 }
 
 footer{
@@ -256,7 +257,8 @@ font-size:28px;
     text-align:center;
 }
 
-    .hero{
+
+.hero{
     position:relative;
     height:100vh;
     overflow:hidden;
@@ -290,6 +292,108 @@ font-size:28px;
     top:50%;
     transform:translateY(-50%);
 }
+
+.navbar{
+    position:sticky;
+    top:0;
+    z-index:9999;
+}
+
+/* ==========================
+   MOBILE RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+/* Hero */
+.hero{
+    height:70vh;
+}
+
+.hero-content{
+    padding:20px;
+}
+
+.hero-content h1{
+    font-size:2rem !important;
+}
+
+.hero-content h3{
+    font-size:1rem;
+}
+
+.hero-content p{
+    font-size:0.9rem;
+}
+
+/* Weather Card */
+.weather-card{
+    position:relative;
+    right:auto;
+    bottom:auto;
+    width:90%;
+    margin:20px auto;
+}
+
+/* Navbar */
+.navbar-brand{
+    font-size:18px;
+}
+
+#themeToggle{
+    margin-top:10px;
+    width:100%;
+}
+
+/* Stats */
+.stat-box{
+    padding:15px;
+}
+
+.stat-box h2{
+    font-size:24px;
+}
+
+/* Cards */
+.service-card{
+    margin-bottom:15px;
+}
+
+.card-img-top{
+    height:180px;
+}
+
+/* Team */
+.card img{
+    height:220px;
+    object-fit:cover;
+}
+
+/* Map */
+#map{
+    height:300px;
+}
+
+/* Contact */
+#contact .col-md-6{
+    margin-bottom:20px;
+}
+
+/* Buttons */
+.btn-lg{
+    padding:10px 15px;
+    font-size:14px;
+}
+
+/* WhatsApp */
+.whatsapp{
+    bottom:15px;
+    right:15px;
+    font-size:20px;
+    padding:12px;
+}
+}
+
 </style>
 </head>
 <body>
@@ -462,7 +566,7 @@ Our GIS Services
 
 <div class="row g-4">
 
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
 <div class="card service-card">
 <div class="card-body">
 <h4>GIS Mapping</h4>
@@ -471,7 +575,7 @@ Our GIS Services
 </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
         <div class="card-body">
             <h4>Web GIS</h4>
@@ -482,7 +586,7 @@ Our GIS Services
 
 
 
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
         <div class="card-body">
             <h4>Remote Sensing</h4>
@@ -492,7 +596,7 @@ Our GIS Services
 </div>
 
 
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
         <div class="card-body">
             <h4>GeoAI</h4>
@@ -502,7 +606,7 @@ Our GIS Services
 </div>
 
 
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
         <div class="card-body">
             <h4>Telecom GIS</h4>
@@ -512,7 +616,7 @@ Our GIS Services
 </div>
 
 
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
         <div class="card-body">
             <h4>Vehicle Tracking</h4>
@@ -555,7 +659,7 @@ Gallery
 <div class="row g-4">
 
 <!-- GIS Mapping -->
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
         <img src="https://lh3.googleusercontent.com/d/14JE4nIDyGA5Xf3rJQW__W3Tc5nuxTsEl"
              class="card-img-top"
@@ -568,7 +672,7 @@ Gallery
 </div>
 
 <!-- Web GIS -->
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
         <img src="https://lh3.googleusercontent.com/d/15-H6TxeTSzRb0uOfFsMKSUXvxoxCswPc"
              class="card-img-top"
@@ -581,7 +685,7 @@ Gallery
 </div>
 
 <!-- GeoServer -->
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
         <img src="https://lh3.googleusercontent.com/d/1AZrRmliZSa-hU9ylcGyr0mW3pb80xTQ3" 
              class="card-img-top"
@@ -594,7 +698,7 @@ Gallery
 </div>
 
 <!-- Portal -->
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
       <img src="https://lh3.googleusercontent.com/d/1Iml-1hzzfIbIFq6NwAwTGkXzLwogVE_a" 
              class="card-img-top"
@@ -607,7 +711,7 @@ Gallery
 </div>
 
 <!-- LULC -->
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
        <img src="https://lh3.googleusercontent.com/d/1kpEGgMeEYcLSy8nr3D_Bhzo84mEGuzDJ"
              class="card-img-top"
@@ -619,7 +723,7 @@ Gallery
     </div>
 </div>
 
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
        <img src="https://lh3.googleusercontent.com/d/1PabJKyQA5uiZ6qTgG0DQPDcgsT9uvLs8" 
              class="card-img-top"
@@ -632,7 +736,7 @@ Gallery
 </div>
 
 <!-- GeoAI -->
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
         <img src="https://lh3.googleusercontent.com/d/1vVyyG5WYhnBHQAEmHt_5edppF0r3AmlJ" 
              class="card-img-top"
@@ -645,7 +749,7 @@ Gallery
 </div>
 
 <!-- Telecom GIS -->
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
       <img src="https://lh3.googleusercontent.com/d/19curbgltHK5roRBJg3BgPEq14EwCi4kG" 
              class="card-img-top"
@@ -658,7 +762,7 @@ Gallery
 </div>
 
 <!-- Vehicle Tracking -->
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
     <div class="card service-card">
        <img src="https://lh3.googleusercontent.com/d/1-e6XGE-jZ0Ln0Mrv6EV1X4Z0MjRSCSGB"
              class="card-img-top"
@@ -685,7 +789,7 @@ Our Team
 
 <div class="row">
 
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
 <div class="card">
 
 <img src="images/team1.jpg"
@@ -703,7 +807,7 @@ class="card-img-top">
 
 </div>
 
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
 <div class="card">
 
 <img src="images/team2.jpg"
@@ -719,7 +823,7 @@ class="card-img-top">
 
 </div>
 
-<div class="col-md-4">
+<div class="col-12 col-sm-6 col-lg-4">
 <div class="card">
 
 <img src="images/team3.jpg"
@@ -794,7 +898,7 @@ Send
 </footer>
 
 <a class="whatsapp"
-href="https://wa.me/8509552691"
+href="https://wa.me/91743256"
 target="_blank">
 
 <i class="bi bi-whatsapp"></i>
@@ -864,6 +968,12 @@ data.current.wind_speed_10m;
 document.getElementById("condition").innerHTML =
 "Live Weather";
 
+});
+
+document.addEventListener("DOMContentLoaded", function(){
+    document.querySelectorAll("img").forEach(img=>{
+        img.loading="lazy";
+    });
 });
 
 </script>
