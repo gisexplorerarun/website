@@ -180,53 +180,6 @@ font-size:28px;
     margin:auto;
 }
 
-.weather-card{
-    position:absolute;
-    right:10px;
-    bottom:20px;
-    width:100px;
-    background:#fff;
-    border-radius:20px;
-    padding:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
-    z-index:10;
-}
-
-.weather-header{
-    font-size:10px;
-    font-weight:200;
-    color:#333;
-    margin-bottom:15px;
-}
-
-.weather-body{
-    display:flex;
-    align-items:center;
-}
-
-.weather-icon{
-    font-size:45px;
-    margin-right:15px;
-}
-
-.weather-info h1{
-    margin:0;
-    font-size:20px;
-    font-weight:350;
-}
-
-.weather-info p{
-    margin:0;
-    color:#555;
-}
-
-.weather-footer{
-    display:flex;
-    justify-content:space-between;
-    margin-top:15px;
-    font-size:13px;
-    color:#666;
-}
 
 
 .service-card{
@@ -952,29 +905,6 @@ this.innerHTML='🌙 Dark Mode';
 
 }
 
-fetch('https://api.open-meteo.com/v1/forecast?latitude=22.57&longitude=88.36&current=temperature_2m,relative_humidity_2m,wind_speed_10m')
-.then(res=>res.json())
-.then(data=>{
-
-document.getElementById("temp").innerHTML =
-Math.round(data.current.temperature_2m)+'°C';
-
-document.getElementById("humidity").innerHTML =
-data.current.relative_humidity_2m;
-
-document.getElementById("wind").innerHTML =
-data.current.wind_speed_10m;
-
-document.getElementById("condition").innerHTML =
-"Live Weather";
-
-});
-
-document.addEventListener("DOMContentLoaded", function(){
-    document.querySelectorAll("img").forEach(img=>{
-        img.loading="lazy";
-    });
-});
 
 </script>
 
